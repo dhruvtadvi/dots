@@ -1,0 +1,2 @@
+set previewer ~/.config/lf/preview
+map D %gio trash $fx

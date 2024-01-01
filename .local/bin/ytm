@@ -1,0 +1,2 @@
+
+python -m yt_dlp $1 -xciw -f "bestaudio/best" --audio-quality 0 --audio-format mp3 --embed-thumbnail --embed-metadata -o "~/Music/%(title)s.%(ext)s"

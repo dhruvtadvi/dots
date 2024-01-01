@@ -1,0 +1,11 @@
+if [[ -z "$1" ]]; then
+  sudo reflector -l 5 --sort rate -c "India" --save /etc/pacman.d/mirrorlist
+else
+  if [[ "$#" -ne 1 ]]; then 
+    echo "Usage: updmirrors <Country Name>"
+  else
+    sudo reflector -l 5 --sort rate -c $1 --save /etc/pacman.d/mirrorlist
+  fi
+fi
+
+sudo pacman -Sy

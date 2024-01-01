@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#create cache dir if not exists
+if [[ ! -d "$HOME/.cache" ]]; then
+  mkdir -p $HOME/.cache
+elif [[ ! -d "$HOME/.cache/ncmpcpp" ]]; then
+  mkdir -p $HOME/.cache/ncmpcpp
+fi
+
+music_directory="$HOME/Music/"
+art_path="$HOME/.cache/ncmpcpp/artwork.png"
+file_path=$(mpc --format "$music_directory"%file% current)
+
+[ -e "$previewname" ] || ffmpeg -y -i "$file_path" -an -vf scale=128:128 "$art_path" > /dev/null 2>&1
+
+notify-send -r 27072 "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$art_path" -t 2000
