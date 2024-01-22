@@ -31,13 +31,8 @@ require("lazy").setup({
 			require("plugins.configs.lualine")
 		end,
 	},
-	{
-		"akinsho/bufferline.nvim",
-		dependencies = {"nvim-tree/nvim-web-devicons"},
-	},
 })
 
-require("bufferline").setup{}
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', 'ff', builtin.find_files, {})
 
