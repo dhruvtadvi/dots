@@ -1,2 +1,15 @@
 set previewer ~/.config/lf/preview
 map D %gio trash $fx
+
+cmd mkdir %{{
+    printf "Make directory: "
+    read ans
+    mkdir $ans
+}}
+map md mkdir
+
+map dD ${{
+    echo 'delete?[y/n]'
+    read ans
+    [ $ans = 'y' ] && echo 'deleting files..' || echo 'cancelled.'
+}}
