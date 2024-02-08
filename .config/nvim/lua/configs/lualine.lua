@@ -1,4 +1,4 @@
- local colors = {
+local colors = {
 	darkgray = "#16161d",
 	gray = "#727169",
 	innerbg = nil,
@@ -50,6 +50,8 @@ local transparent = {
 
 require('lualine').setup {
   options = {
+    disabled_filetypes = { 'nvim-tree' },
+    ignore_focus = {},
     icons_enabled = true,
     theme = transparent,
     component_separators = { left = '', right = ''},
@@ -86,5 +88,5 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = { "nvim-tree" }
 }
