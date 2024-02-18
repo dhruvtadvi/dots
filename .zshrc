@@ -16,6 +16,6 @@ alias lx='ls -lbhHigUmuSa@' # all list and extended
 alias tree='exa --tree' # tree view
 alias lS='exa -1' # one column by just names
 
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
-bindkey  "^[[3~"  delete-char
+bindkey '^I' beginning-of-line
+bindkey '^A' end-of-line
+bindkey '^U' expand-or-complete-prefix
