@@ -1,6 +1,7 @@
 vim.cmd[[set nowrap]]
 vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = '#FFFFFF' })
 vim.opt.cursorlineopt = "number"
+vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.o.number = true
 vim.opt.relativenumber = true
